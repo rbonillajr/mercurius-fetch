@@ -1,0 +1,9 @@
+{
+  "exclude": ["node_modules", "test"],
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "allowJs": true,
+    "emitDeclarationOnly": true,
+  }
+}
