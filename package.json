@@ -1,0 +1,39 @@
+{
+  "name": "mercurius-fetch",
+  "version": "0.0.0",
+  "description": "Mercurius fetch Plugin adds fetch to an api rest directly on query or properties of query",
+  "main": "index.js",  
+  "scripts": {
+    "unit": "tap --100 test/basic.js",
+    "test:watch": "tap test/basic.js --watch",
+    "cov": "tap --coverage-report=html -J test/*.js",
+    "lint": "standard | snazzy",    
+    "test": "npm run lint && npm run unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mercurius-js/auth.git"
+  },
+  "author": "Rene Bonilla <rbonillajr@hotmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rbonillajr/mercurius-fetch/issues"
+  },
+  "homepage": "https://github.com/rbonillajr/mercurius-fetch",
+  "devDependencies": {
+    "fastify": "^3.22.1",
+    "mercurius": "^8.8.0",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.4",
+    "tap": "^15.0.10",
+    "tsd": "^0.18.0"
+  },
+  "dependencies": {
+    "fastify-error": "^0.3.1",
+    "fastify-plugin": "^3.0.0",
+    "graphql": "^16.0.1",
+    "lodash.get": "^4.4.2",
+    "undici": "^4.9.3"
+  }
+}
