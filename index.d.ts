@@ -1,2 +1,5 @@
-export = mercuriusFetch;
-declare const mercuriusFetch: any;
+import { FastifyPluginAsync } from "fastify";
+
+declare const mercuriusFetch: FastifyPluginAsync
+
+export default mercuriusFetch
