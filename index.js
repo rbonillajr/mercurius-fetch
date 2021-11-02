@@ -14,4 +14,4 @@ const mercuriusFetch = fp(
 
 module.exports = mercuriusFetch
 module.exports.mercuriusFetch = mercuriusFetch
-module.exports.default =  mercuriusFetch
+module.exports.default = mercuriusFetch

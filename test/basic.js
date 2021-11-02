@@ -139,7 +139,7 @@ test('basic - should return the api response into specific property', async (t) 
   t.plan(1)
 
   const app = Fastify()
-  const user = 'user1'
+
   const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ data: 'name-mock' }))

@@ -4,8 +4,8 @@
   "description": "Mercurius fetch Plugin adds fetch to an api rest directly on query or properties of query",
   "main": "index.js",
   "scripts": {
-    "unit": "tap --100 test/basic.js",
-    "test:watch": "tap test/basic.js --watch",
+    "unit": "tap --100 test/*.js",
+    "test:watch": "tap test/*.js --watch",
     "cov": "tap --coverage-report=html -J test/*.js",
     "lint": "standard | snazzy",
     "test": "npm run lint && npm run unit",
