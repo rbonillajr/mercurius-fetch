@@ -21,15 +21,15 @@ const schema = `
   }
 
   type Query {
-    info: [Response] @fetch(url:"http://localhost:3000/info", extractFromResponse:"data")
+    info(user:String): [Response] @fetch(url:"http://localhost:3000/info/$user", extractFromResponse:"data")
   }`
 
 app.register(mercurius, {
   schema
 })
 
-app.get('/info', async function () {
-  return { data: [{ id: 1, code: 'code', name: 'name' }] }
+app.get('/info/:user', async function (req, rep) {
+  return { data: [{ id: 2, code: 'code', name: req.params.user }] }
 })
 
 app.register(mercuriusFetch)
