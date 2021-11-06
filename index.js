@@ -1,5 +1,5 @@
 const fp = require('fastify-plugin')
-const { registerFetchHandler } = require('./lib/fetch')
+const { registerFetchHandler } = require('./lib/mercurius-fetch')
 
 const mercuriusFetch = fp(
   async (fastify) => {
