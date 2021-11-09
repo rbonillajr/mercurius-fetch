@@ -1,6 +1,6 @@
 # mercurius-fetch
 
-Mercurius fetch is Plugin for adds fetch to an api rest directly on query or properties of query.
+Mercurius fetch is Plugin for adds fetch to a rest api directly on query or properties of query.
 
 [Undici](https://github.com/nodejs/undici) fetch is being used for requests to rest apis. 
 
