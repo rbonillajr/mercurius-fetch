@@ -24,7 +24,7 @@
   "homepage": "https://github.com/rbonillajr/mercurius-fetch",
   "devDependencies": {
     "fastify": "^3.22.1",
-    "mercurius": "^8.8.0",
+    "mercurius": "^9.0.0",
     "snazzy": "^9.0.0",
     "standard": "^16.0.4",
     "tap": "^15.0.10",
