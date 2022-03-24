@@ -27,7 +27,7 @@
     "mercurius": "^9.0.0",
     "snazzy": "^9.0.0",
     "standard": "^16.0.4",
-    "tap": "^15.0.10",
+    "tap": "^16.0.1",
     "typescript": "^4.4.4"
   },
   "dependencies": {
