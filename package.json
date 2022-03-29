@@ -35,6 +35,6 @@
     "fastify-plugin": "^3.0.0",
     "graphql": "^16.0.1",
     "lodash.get": "^4.4.2",
-    "undici": "^4.9.3"
+    "undici": "^5.0.0"
   }
 }
