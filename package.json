@@ -1,6 +1,6 @@
 {
   "name": "mercurius-fetch",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Mercurius fetch Plugin adds fetch to a rest api directly on query or properties of query",
   "main": "index.js",
   "scripts": {
