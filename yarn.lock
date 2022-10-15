@@ -1427,12 +1427,7 @@ fast-uri@^2.0.0, fast-uri@^2.1.0:
   resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-2.1.0.tgz#9279432d6b53675c90116b947ed2bbba582d6fb5"
   integrity sha512-qKRta6N7BWEFVlyonVY/V+BMLgFqktCUV0QjT259ekAIlbVrMaFnFLxJ4s/JPl4tou56S1BzPufI60bLe29fHA==
 
-fastify-plugin@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.2.0.tgz#fb28ec08312777ad343059177f13277ca3e7c3b1"
-  integrity sha512-hovKzEXZc2YgeuXn41/2EA/IaIOdRu1pB9WKgnzDBj3lhKSdDCEsckHa7I6LiT/LhflvAQX7ZY8IQ6eBX0htTg==
-
-fastify-plugin@^4.2.0, fastify-plugin@^4.2.1:
+fastify-plugin@^4.0.0, fastify-plugin@^4.2.0, fastify-plugin@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.2.1.tgz#4b80020957938dbc44b8ad4a898fd8bcfbab3f65"
   integrity sha512-dlGKiwLzRBKkEf5J5ho0uAD/Jdv8GQVUbriB3tAX3ehRUXE4gTV3lRd5inEg9li1aLzb0EGj8y2K4/8g1TN06g==
@@ -1740,12 +1735,7 @@ graphql-jit@^0.7.3:
     lodash.merge "4.6.2"
     lodash.mergewith "4.6.2"
 
-graphql@^16.0.0:
-  version "16.5.0"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.5.0.tgz#41b5c1182eaac7f3d47164fb247f61e4dfb69c85"
-  integrity sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==
-
-graphql@^16.6.0:
+graphql@^16.0.0, graphql@^16.6.0:
   version "16.6.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.6.0.tgz#c2dcffa4649db149f6282af726c8c83f1c7c5fdb"
   integrity sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==
@@ -2300,9 +2290,9 @@ make-dir@^3.0.0, make-dir@^3.0.2:
     semver "^6.0.0"
 
 mercurius@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/mercurius/-/mercurius-11.0.0.tgz#f0bcb3ea69ce4567bbe010b446607854e32676b8"
-  integrity sha512-7t++ALNt9agIrc2hLhGes4ZIEwQ9zAz8hUmmTQojLNhuGCLDU7NKzcxKsX7UClBJewaQCORqlepE+k11Dsq6lg==
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/mercurius/-/mercurius-11.0.1.tgz#5e97252dbc7606e6777200cdda0d363e8ff44494"
+  integrity sha512-gas4uY4QaUi98icFOYT3oGVYqg0QZNGpaO9Nz/K148vD9/PcYLdVLnuzbjciqO5DpxHK0PpgoQywdNLt+A371A==
   dependencies:
     "@fastify/error" "^3.0.0"
     "@fastify/static" "^6.0.0"
@@ -3488,9 +3478,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@^4.4.4:
-  version "4.8.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.3.tgz#d59344522c4bc464a65a730ac695007fdb66dd88"
-  integrity sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==
+  version "4.8.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.4.tgz#c464abca159669597be5f96b8943500b238e60e6"
+  integrity sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
