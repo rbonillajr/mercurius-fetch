@@ -2,11 +2,12 @@
 
 Mercurius fetch is Plugin for adds fetch to a rest api directly on query or properties of query.
 
-[Undici](https://github.com/nodejs/undici) fetch is being used for requests to rest apis. 
+[Undici](https://github.com/nodejs/undici) fetch is being used for requests to rest apis.
 
 Define the fetch directive in the queries or in properties of the query to consume apis without using a resolver
 
 ## Requiriment
+
 Use nodejs >= 16.x
 
 ## Install
@@ -14,7 +15,9 @@ Use nodejs >= 16.x
 ```bash
 npm i fastify mercurius mercurius-fetch
 ```
+
 or
+
 ```bash
 yarn add fastify mercurius mercurius-fetch
 ```
@@ -27,7 +30,7 @@ const mercurius = require('mercurius')
 const mercuriusFetch = require('mercurius-fetch')
 
 const app = Fastify({
-  logger: true
+  logger: true,
 })
 
 const schema = `
@@ -47,11 +50,51 @@ const schema = `
   }`
 
 app.register(mercurius, {
-  schema
+  schema,
 })
 
-app.get('/info', async function () {
+app.get('/info', async function (request, reply) {
   return { data: [{ id: 1, code: 'code', name: 'name' }] }
+})
+
+app.register(mercuriusFetch)
+
+app.listen(3000)
+```
+
+### Mutations
+
+```js
+const Fastify = require('fastify')
+const mercurius = require('mercurius')
+const mercuriusFetch = require('mercurius-fetch')
+
+const app = Fastify({
+  logger: true,
+})
+
+const schema = `
+  directive @mutate(
+      url: String
+      extractFromResponse: String
+  ) on OBJECT | FIELD_DEFINITION
+
+  type Response {
+    id: Int
+    code: String
+    name: String
+  }
+
+  type Query {
+    addInfo(user: String, date: String): Response @mutate(url:"http://localhost:3000/info", extractFromResponse:"data")
+  }`
+
+app.register(mercurius, {
+  schema,
+})
+
+app.post('/info', async function (request, reply) {
+  return { data: { id: 2, code: request.body.code, name: request.body.name } }
 })
 
 app.register(mercuriusFetch)
