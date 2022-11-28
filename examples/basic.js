@@ -10,7 +10,7 @@ const app = Fastify({
 
 const schema = `
   directive @fetch(
-    url: String
+    url: String!
     extractFromResponse: String
   ) on OBJECT | FIELD_DEFINITION
 
