@@ -7,7 +7,7 @@
     "unit": "tap --100 test/*.js",
     "test:watch": "tap test/*.js --watch",
     "cov": "tap --coverage-report=html -J test/*.js",
-    "lint": "standard | snazzy",
+    "lint": "standard --fix | snazzy",
     "test": "npm run lint && npm run unit",
     "typescript": "tsc"
   },
@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/rbonillajr/mercurius-fetch",
   "devDependencies": {
+    "@types/lodash.get": "^4.4.7",
     "fastify": "^4.10.2",
     "mercurius": "^11.3.0",
+    "prettier": "^2.8.0",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
     "tap": "^16.3.2",

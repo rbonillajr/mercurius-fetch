@@ -14,6 +14,10 @@ Use nodejs >= 16.x
 ```bash
 npm i fastify mercurius mercurius-fetch
 ```
+or
+```bash
+yarn add fastify mercurius mercurius-fetch
+```
 
 ## Quick Start
 
