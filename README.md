@@ -86,7 +86,7 @@ const schema = `
   }
 
   type Query {
-    addInfo(user: String, date: String): Response @mutate(url:"http://localhost:3000/info", extractFromResponse:"data")
+    addInfo(user: String, date: String): Response @mutate(url:"http://localhost:3000/info", extractFromResponse:"data", method:"POST")
   }`
 
 app.register(mercurius, {
