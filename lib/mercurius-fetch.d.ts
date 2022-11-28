@@ -1,1 +1,5 @@
-export function registerFetchHandler(schema: any): Promise<void>;
+import { GraphQLSchema } from "graphql";
+
+export function registerFetchHandler(
+  schema: GraphQLSchema | any
+): Promise<void>;
