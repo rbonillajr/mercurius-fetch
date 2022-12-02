@@ -77,6 +77,7 @@ const schema = `
   directive @mutate(
       url: String!
       extractFromResponse: String
+      method: String
   ) on OBJECT | FIELD_DEFINITION
 
   type Response {
@@ -85,7 +86,7 @@ const schema = `
     name: String
   }
 
-  type Query {
+  type Mutation {
     addInfo(user: String, date: String): Response @mutate(url:"http://localhost:3000/info", extractFromResponse:"data", method:"POST")
   }`
 
