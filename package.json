@@ -1,6 +1,6 @@
 {
   "name": "mercurius-fetch",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Mercurius fetch Plugin adds fetch to a rest api directly on query or properties of query",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "test:watch": "tap test/*.js --watch",
     "cov": "tap --coverage-report=html -J test/*.js",
     "lint": "standard | snazzy",
+    "lint:fix": "standard --fix | snazzy",
     "test": "npm run lint && npm run unit",
     "typescript": "tsc"
   },
@@ -23,18 +24,20 @@
   },
   "homepage": "https://github.com/rbonillajr/mercurius-fetch",
   "devDependencies": {
-    "fastify": "^4.8.1",
-    "mercurius": "^11.0.1",
+    "@types/lodash.get": "^4.4.7",
+    "fastify": "^4.10.2",
+    "mercurius": "^11.3.0",
+    "prettier": "^2.8.0",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
-    "tap": "^16.3.0",
-    "typescript": "^4.8.4"
+    "tap": "^16.3.2",
+    "typescript": "^4.9.3"
   },
   "dependencies": {
     "@fastify/error": "^3.0.0",
     "fastify-plugin": "^4.3.0",
     "graphql": "^16.6.0",
     "lodash.get": "^4.4.2",
-    "undici": "^5.11.0"
+    "undici": "^5.13.0"
   }
 }
