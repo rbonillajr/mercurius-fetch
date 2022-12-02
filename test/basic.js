@@ -9,15 +9,15 @@ const mercuriusFetch = require('..')
 const mockedData = [{ id: 1, code: 'code', name: 'name' }]
 const mockedDataOnProperty = [{ id: 1, code: 'code', name: 'name-mock' }]
 const mockedRestResponse = {
-  data: mockedData
+  data: mockedData,
 }
 
 const expectedQueryResponse = {
-  data: { info: mockedData }
+  data: { info: mockedData },
 }
 
 const expectedQueryResponseOnProperty = {
-  data: { info: mockedDataOnProperty }
+  data: { info: mockedDataOnProperty },
 }
 
 test('basic - should return the api response successful', async (t) => {
@@ -55,7 +55,7 @@ test('basic - should return the api response successful', async (t) => {
   }`
 
   app.register(mercurius, {
-    schema
+    schema,
   })
   app.register(mercuriusFetch)
 
@@ -71,7 +71,7 @@ test('basic - should return the api response successful', async (t) => {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     url: '/graphql',
-    payload: JSON.stringify({ query })
+    payload: JSON.stringify({ query }),
   })
 
   t.same(JSON.parse(response.body), expectedQueryResponse)
@@ -114,7 +114,7 @@ test('basic - should return the api response successful with params', async (t) 
   }`
 
   app.register(mercurius, {
-    schema
+    schema,
   })
   app.register(mercuriusFetch)
 
@@ -129,7 +129,7 @@ test('basic - should return the api response successful with params', async (t) 
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     url: '/graphql',
-    payload: JSON.stringify({ query })
+    payload: JSON.stringify({ query }),
   })
 
   t.same(JSON.parse(response.body), expectedQueryResponse)
@@ -175,16 +175,16 @@ test('basic - should return the api response into specific property', async (t) 
         return [
           {
             id: 1,
-            code: 'code'
-          }
+            code: 'code',
+          },
         ]
-      }
-    }
+      },
+    },
   }
 
   app.register(mercurius, {
     schema,
-    resolvers
+    resolvers,
   })
   app.register(mercuriusFetch)
 
@@ -199,7 +199,7 @@ test('basic - should return the api response into specific property', async (t) 
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     url: '/graphql',
-    payload: JSON.stringify({ query })
+    payload: JSON.stringify({ query }),
   })
 
   t.same(JSON.parse(response.body), expectedQueryResponseOnProperty)
@@ -241,7 +241,7 @@ test('basic - should return without extracting a custom response', async (t) => 
   }`
 
   app.register(mercurius, {
-    schema
+    schema,
   })
   app.register(mercuriusFetch)
 
@@ -256,7 +256,7 @@ test('basic - should return without extracting a custom response', async (t) => 
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     url: '/graphql',
-    payload: JSON.stringify({ query })
+    payload: JSON.stringify({ query }),
   })
 
   t.same(response.body, JSON.stringify(expectedQueryResponse))
@@ -291,16 +291,16 @@ test('basic - should return data without directive', async (t) => {
           {
             id: 1,
             code: 'code',
-            name: 'name'
-          }
+            name: 'name',
+          },
         ]
-      }
-    }
+      },
+    },
   }
 
   app.register(mercurius, {
     schema,
-    resolvers
+    resolvers,
   })
   app.register(mercuriusFetch)
 
@@ -315,7 +315,7 @@ test('basic - should return data without directive', async (t) => {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     url: '/graphql',
-    payload: JSON.stringify({ query })
+    payload: JSON.stringify({ query }),
   })
   t.same(JSON.parse(response.body).data.info.length, 1)
 })
@@ -360,7 +360,7 @@ test('basic - should use the token in the context if present', async (t) => {
     schema,
     context: (request, reply) => {
       return { token: request.headers?.authorization }
-    }
+    },
   })
   app.register(mercuriusFetch)
 
@@ -376,10 +376,10 @@ test('basic - should use the token in the context if present', async (t) => {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      authorization: 'secretotken'
+      authorization: 'Bearer secretotken',
     },
     url: '/graphql',
-    payload: JSON.stringify({ query })
+    payload: JSON.stringify({ query }),
   })
 
   t.same(JSON.parse(response.body), expectedQueryResponse)
