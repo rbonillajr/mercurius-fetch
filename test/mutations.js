@@ -8,11 +8,11 @@ const mercuriusFetch = require('..')
 
 const mockedData = { id: 1, code: 'code', name: 'name' }
 const mockedRestResponse = {
-  data: mockedData,
+  data: mockedData
 }
 
 const expectedMutationResponse = {
-  data: { addInfo: mockedData },
+  data: { addInfo: mockedData }
 }
 
 test('mutations - should return the api response successful with params', async (t) => {
@@ -61,7 +61,7 @@ test('mutations - should return the api response successful with params', async 
     }`
 
   app.register(mercurius, {
-    schema,
+    schema
   })
   app.register(mercuriusFetch)
 
@@ -77,7 +77,7 @@ test('mutations - should return the api response successful with params', async 
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     url: '/graphql',
-    payload: JSON.stringify({ query }),
+    payload: JSON.stringify({ query })
   })
 
   t.same(JSON.parse(response.body), expectedMutationResponse)
@@ -129,7 +129,7 @@ test('mutations - should return without extracting a custom response', async (t)
     }`
 
   app.register(mercurius, {
-    schema,
+    schema
   })
   app.register(mercuriusFetch)
 
@@ -145,7 +145,7 @@ test('mutations - should return without extracting a custom response', async (t)
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     url: '/graphql',
-    payload: JSON.stringify({ query }),
+    payload: JSON.stringify({ query })
   })
 
   t.same(JSON.parse(response.body), expectedMutationResponse)
@@ -198,7 +198,7 @@ test('mutations - should return with a different rest method', async (t) => {
     }`
 
   app.register(mercurius, {
-    schema,
+    schema
   })
   app.register(mercuriusFetch)
 
@@ -214,7 +214,7 @@ test('mutations - should return with a different rest method', async (t) => {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     url: '/graphql',
-    payload: JSON.stringify({ query }),
+    payload: JSON.stringify({ query })
   })
 
   t.same(JSON.parse(response.body), expectedMutationResponse)
@@ -270,8 +270,8 @@ test('mutations - should use the token in the context if present', async (t) => 
   app.register(mercurius, {
     schema,
     context: (request, reply) => {
-      return { token: request.headers?.authorization }
-    },
+      return { auth_token: request.headers?.authorization }
+    }
   })
   app.register(mercuriusFetch)
 
@@ -287,10 +287,10 @@ test('mutations - should use the token in the context if present', async (t) => 
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      authorization: 'Bearer secretotken',
+      authorization: 'Bearer secretotken'
     },
     url: '/graphql',
-    payload: JSON.stringify({ query }),
+    payload: JSON.stringify({ query })
   })
 
   t.same(JSON.parse(response.body), expectedMutationResponse)
