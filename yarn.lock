@@ -286,9 +286,9 @@
   integrity sha512-E8Hfdvs1bG6u0N4vN5Nty6JONUfTdOciyD5rn8KnEsLKIenvOVcr210BQR9t34PRkNyjqnMLGk3e0BsaxRdL+g==
 
 "@fastify/error@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@fastify/error/-/error-3.0.0.tgz#bfcb7b33cec0196413083a91ef2edc7b2c88455b"
-  integrity sha512-dPRyT40GiHRzSCll3/Jn2nPe25+E1VXc9tDwRAIKwFCxd5Np5wzgz1tmooWG3sV0qKgrBibihVoCna2ru4SEFg==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@fastify/error/-/error-3.1.0.tgz#e29376f7ec522a8abecbe7dc04756e92089b73ae"
+  integrity sha512-jmk3Q822+xi8jVzGsux3mWd+9O4rzVUGCqR2+JlF9LkCeeUmRdxPd2Je6S7IGMk5VTtB0xyB3crRQqklUyQ6dQ==
 
 "@fastify/fast-json-stringify-compiler@^4.1.0":
   version "4.1.0"
