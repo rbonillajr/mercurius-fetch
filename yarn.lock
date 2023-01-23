@@ -932,11 +932,6 @@ content-disposition@^0.5.3:
   dependencies:
     safe-buffer "5.2.1"
 
-content-type@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
-  integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
-
 convert-source-map@^1.7.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.8.0.tgz#f3373c32d21b4d780dd8004514684fb791ca4369"
@@ -1388,6 +1383,11 @@ events.on@^1.0.1:
   resolved "https://registry.yarnpkg.com/events.on/-/events.on-1.0.1.tgz#9fe6c69c0c5da10d4988eeffc476f6f9eeb540a3"
   integrity sha512-yT4htzImIQAf7mFV3heqTRNVwysZIgQjrribiCYQk152gcG6shz/WU/6xVGr0oDzkzcDPhMcCYy4lEKBiadSRA==
 
+fast-content-type-parse@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fast-content-type-parse/-/fast-content-type-parse-1.0.0.tgz#cddce00df7d7efb3727d375a598e4904bfcb751c"
+  integrity sha512-Xbc4XcysUXcsP5aHUU7Nq3OwvHq97C+WnbkeIefpeYLX+ryzFJlU6OStFJhs6Ol0LkUGpcK+wL0JwfM+FCU5IA==
+
 fast-decode-uri-component@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz#46f8b6c22b30ff7a81357d4f59abfae938202543"
@@ -1462,16 +1462,16 @@ fastify-plugin@^4.0.0, fastify-plugin@^4.2.0, fastify-plugin@^4.3.0:
   integrity sha512-M3+i368lV0OYTJ5TfClIoPKEKSOF7112iiPdwgfSR0gN98BjA1Nk+c6oBHtfcVt9KiMxl+EQKHC1QNWo3ZOpYQ==
 
 fastify@^4.10.2:
-  version "4.10.2"
-  resolved "https://registry.yarnpkg.com/fastify/-/fastify-4.10.2.tgz#0dd1cb8d16df3c14eff938c08aa6da63b4035d0d"
-  integrity sha512-0T+4zI6N3S8ex0LCZi3H4FasJR4AzWw834fUkPWvV8r6GBJkLmAOfFxH8f5V29Plef24IK0QSQD/tz1Nx+1UOA==
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/fastify/-/fastify-4.12.0.tgz#e5330215d95702336693b38b2e66d34ee8300d3e"
+  integrity sha512-Hh2GCsOCqnOuewWSvqXlpq5V/9VA+/JkVoooQWUhrU6gryO9+/UGOoF/dprGcKSDxkM/9TkMXSffYp8eA/YhYQ==
   dependencies:
     "@fastify/ajv-compiler" "^3.3.1"
     "@fastify/error" "^3.0.0"
     "@fastify/fast-json-stringify-compiler" "^4.1.0"
     abstract-logging "^2.0.1"
     avvio "^8.2.0"
-    content-type "^1.0.4"
+    fast-content-type-parse "^1.0.0"
     find-my-way "^7.3.0"
     light-my-request "^5.6.1"
     pino "^8.5.0"
